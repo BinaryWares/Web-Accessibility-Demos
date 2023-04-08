@@ -52,6 +52,7 @@ function openModal() {
   modal.style.display = "block";
   modal.style.visibility = "visible";
   trapKeyboardFocus(modal);
+  modal.querySelector("#modal-footer button:first-child").focus();
   document.addEventListener("keydown", escapeHandler);
 }
 
