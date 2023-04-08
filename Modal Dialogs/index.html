@@ -10,21 +10,42 @@
   <body>
     <main>
       <h1>Modal Demo</h1>
-      <button onclick="openModal()">Open Modal Dialog</button>
+      <button type="button" onclick="openModal()" aria-haspopup="dialog">
+        Open Modal Dialog
+      </button>
       <div id="overlay" aria-hidden="true"></div>
     </main>
-    <div id="modal-dialog" aria-modal="false" aria-hidden="true">
-      <h2>Example Modal</h2>
+    <div
+      role="alertdialog"
+      id="modal-dialog"
+      aria-modal="false"
+      aria-labelledby="modal-label"
+      aria-describedby="modal-description"
+    >
+      <section id="modal-header">
+        <h2 id="modal-label">Example Modal</h2>
+        <button type="button" id="close-button" onclick="closeModal()">
+          &times;
+        </button>
+      </section>
       <hr />
-      <p>This is a sample modal dialog.</p>
-      <p>Please Press "OK" to accept the terms of usage.</p>
-      <p>Please Press "Cancel" to refuse the terms and conditions.</p>
-      <p>
-        Note: You will not be able to use the product if you refuse to accept
-        the terms and conditions associated with this product.
-      </p>
-      <button onclick="closeModal()">OK</button>
-      <button onclick="closeModal()">Cancel</button>
+      <section id="modal-body">
+        <p id="modal-description">
+          This is a sample modal dialog. Please Press "OK" to accept the terms
+          of usage. Please Press "Cancel" to refuse the terms and conditions.
+        </p>
+        <i
+          >Note: You will not be able to use the product if you refuse to accept
+          the terms and conditions associated with this product.</i
+        >
+      </section>
+      <hr />
+      <section id="modal-footer">
+        <div>
+          <button type="button" onclick="closeModal()">OK</button>
+          <button type="button" onclick="closeModal()">Cancel</button>
+        </div>
+      </section>
     </div>
   </body>
 </html>

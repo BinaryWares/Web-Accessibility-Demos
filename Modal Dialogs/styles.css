@@ -40,12 +40,13 @@ div#overlay {
   opacity: 0.6;
   pointer-events: none;
   display: none;
+  visibility: hidden;
 }
 
 div#modal-dialog {
   background: #fff;
   position: absolute;
-  height: calc(100vh - 55%);
+  height: calc(100vh - 65%);
   width: calc(100vw - 40%);
   top: 50%;
   left: 50%;
@@ -57,9 +58,56 @@ div#modal-dialog {
   text-align: center;
   box-sizing: border-box;
   display: none;
+  visibility: hidden;
 }
 
 div#modal-dialog > button {
   margin: 1rem;
   padding: 6px 16px;
+}
+#modal-header {
+  position: relative;
+  padding-top: 1rem;
+}
+#modal-header > #close-button {
+  background: #f4695f;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+#modal-body {
+  margin: 1rem;
+  padding: 0;
+}
+
+#modal-footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+}
+#modal-footer > div {
+  display: flex;
+  justify-content: space-around;
+}
+#modal-footer > div > button {
+  padding: 6px 16px;
+  background: #f4695f;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#modal-footer > div > button:first-child {
+  background: #b7f94d;
+  color: #000;
 }
