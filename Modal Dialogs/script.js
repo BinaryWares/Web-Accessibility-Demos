@@ -1,13 +1,11 @@
 function toggleOverlay() {
   const overlay = document.getElementById("overlay");
-  if (overlay.getAttribute("aria-hidden") === "true") {
+  if (overlay.style.display === "none" || overlay.style.display === "") {
     overlay.style.display = "block";
-    overlay.setAttribute("aria-hidden", "false");
     overlay.style.visibility = "visible";
     return;
   }
   overlay.style.display = "none";
-  overlay.setAttribute("aria-hidden", "true");
   overlay.style.visibility = "hidden";
 }
 
