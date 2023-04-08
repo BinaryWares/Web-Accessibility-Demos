@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accessible Modal Dialog</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Modal Demo</h1>
+      <button onclick="openModal()">Open Modal Dialog</button>
+      <div id="overlay" aria-hidden="true"></div>
+    </main>
+    <div id="modal-dialog" aria-modal="false" aria-hidden="true">
+      <h2>Example Modal</h2>
+      <hr />
+      <p>This is a sample modal dialog.</p>
+      <p>Please Press "OK" to accept the terms of usage.</p>
+      <p>Please Press "Cancel" to refuse the terms and conditions.</p>
+      <p>
+        Note: You will not be able to use the product if you refuse to accept
+        the terms and conditions associated with this product.
+      </p>
+      <button onclick="closeModal()">OK</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </body>
+</html>
